@@ -1,0 +1,16 @@
+{
+  "short_name": "Scrab-points",
+  "name": "Scrab-points by Quentin",
+  "icons": [
+    {
+      "src": "img/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "index.html",
+  "background_color": "#9b59b6",
+  "theme_color": "#9b59b6",
+  "display": "fullscreen",
+  "orientation": "landscape"
+}

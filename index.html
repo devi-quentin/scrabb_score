@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 1200px)" href="css/mobile.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
+    <title>Scrab-points</title>
+</head>
+
+<body onload="init_index()">
+    <audio id="myAudio">
+        <source src="sounds/btn.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="_center_screen">
+        <div class="_title">
+            <div class="title">Nombre de joueurs ?</div>
+        </div>
+        <div class="_content" id="nPlayersChoice">
+            <!-- Génération grace à construct_nPlayersChoice() -->
+        </div>
+
+        <div class="_title" style="margin-top: 10px;">
+            <div class="title">Chronomètre ?</div>
+        </div>
+        <div class="_content" id="chronoChoice">
+            <!-- Génération grace à construct_chronoChoice() -->
+        </div>
+
+        <div class="_content">
+            <div class="btn_round rectangle green" style="margin-top: 10px;" onclick="startGame()">Jouer</div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="js/js.js"></script>
+</body>
+
+</html>

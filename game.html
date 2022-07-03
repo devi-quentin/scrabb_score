@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" media="screen and (max-width: 1200px)" href="css/mobile.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">    
+    <link rel="manifest" href="manifest.json">
+    <title>Scrab-points</title>
+</head>
+
+<body onload="init_game()">
+    <audio id="myAudio" src="sounds/btn.mp3" type="audio/mpeg"></audio>
+
+    <div class="_center_screen" id="confirmNewGame">
+        <div class="_title">
+            <div class="title">Nouvelle partie ?</div>
+        </div>
+        <div class="_content">
+            <div class="btn_round red" onclick="hidConfirmNewGame()">X</div>
+            <div class="btn_round green" onclick="newGame()">V</div>
+        </div>
+    </div>
+
+    <div id="part_grid">
+    </div>
+
+    <div id="part_chrono" onclick="chronoPlay()">
+        <div id="chrono_bar"></div>
+        <div id="chrono_text"></div>
+    </div>
+
+    <div id="part_board">
+        <div class="_typing_score">
+            <div id="typing_score"></div>
+        </div>
+        <div class="_numbers_keys" id="numbers_keys">
+            <div class="btn_round number_key" onclick="number_key(true, this, '0')">0</div>
+            <div class="btn_round number_key" onclick="number_key(true, this, '1')">1</div>
+            <div class="btn_round number_key" onclick="number_key(true, this, '2')">2</div>
+            <div class="btn_round number_key" onclick="number_key(true, this, '3')">3</div>
+            <div class="btn_round number_key" onclick="number_key(true, this, '4')">4</div>
+            <div class="btn_round number_key" onclick="number_key(true, this, '5')">5</div>
+            <div class="btn_round number_key" onclick="number_key(true, this, '6')">6</div>
+            <div class="btn_round number_key" onclick="number_key(true, this, '7')">7</div>
+            <div class="btn_round number_key" onclick="number_key(true, this, '8')">8</div>
+            <div class="btn_round number_key" onclick="number_key(true, this, '9')">9</div>
+            <div class="btn_round number_key" onclick="number_key(true, this, '-')">-</div>
+            <div class="btn_round number_key" onclick="number_key(true, this, '+')">+</div>
+            <div class="btn_round transparent"></div>
+            <div class="btn_round number_key green" onclick="valid_typing_score()"><i class="fas fa-check"></i></div>
+            <div class="btn_round number_key red" onclick="resetTypingScore()"><i class="fas fa-times"></i></div>
+            <div class="btn_round number_key orange" onclick="skipTurn()"><i class="fas fa-angle-double-right"></i></div>
+        </div>
+        <div class="_options">
+            <div class="btn_option transparent diff" id="diffPoints">Différence: 0 points</div>
+            <!-- <div class="btn_option green" id="toggleKeyboard"><i class="fas fa-keyboard"></i></div> -->
+            <div class="btn_option red" onclick="showConfirmNewGame()">Nouvelle partie</div>
+            <div class="btn_option search"><img src="img/search.svg"><input type="text" class="search" id="search"
+                    placeholder=""></div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/cors.js"></script>
+    <script src="js/chrono.js"></script>
+    <script src="js/js.js"></script>
+</body>
+
+</html>
